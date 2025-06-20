@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokédex com API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <header class="bg-green-600 text-white p-4 text-center font-bold text-xl">
+<h1 class="font-bold text-xl">Pokédex</h1>
+
+</header>
+
+<main class="flex-grow container mx-auto p-4 max-w-3xl">
+  
+    <section id="main-screen" class="space-y-4">
+
+      <h2 class="text-2xl font-semibold mb-2">Pokémons</h2>
+
+      <a href="favoritos.html" class="bg-yellow-400 text-green-900 px-3 py-1 rounded hover:bg-yellow-500">Favoritos</a>
+
+      <ul id="pokemon-list" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></ul>
+
+      <div class="flex justify-between mt-4">
+        <button id="prev-page" class="bg-green-600 text-white px-4 py-2 rounded disabled:opacity-50" disabled>Anterior</button>
+        <button id="next-page" class="bg-green-600 text-white px-4 py-2 rounded">Próximo</button>
+      </div>
+
+    </section>
+
+    <section id="detail-screen" class="hidden space-y-4">
+
+      <button id="back-btn" class="text-green-600 hover:underline">&larr; Voltar</button>
+
+      <h2 id="detail-name" class="text-3xl font-bold"></h2>
+      <img id="detail-image" src="" alt="Imagem Pokémon" class="w-48 h-48 object-contain mx-auto" />
+
+      <ul id="detail-list" class="list-disc list-inside space-y-1"></ul>
+
+      <button id="fav-btn" class="mt-4 bg-yellow-400 px-4 py-2 rounded hover:bg-yellow-500">
+        Marcar como favorito
+      </button>
+
+    </section>
+  </main>
+
+  <!-- Puxa o JS externo -->
+  <script src="app.js"></script>
+</body>
+</html>
